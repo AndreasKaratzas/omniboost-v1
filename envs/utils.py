@@ -92,23 +92,24 @@ def get_obs(
 def simulate(
         model,
         sample,
-        std_scaler_path: str = '../../data/demo/StandardScaler.pkl',
-        norm_scaler_path: str = '../../data/demo/MinMaxScaler.pkl',
+        # std_scaler_path: str = '../../data/demo/StandardScaler.pkl',
+        # norm_scaler_path: str = '../../data/demo/MinMaxScaler.pkl',
         overwrite_num_classes: int = None):
     # load standard scaler
-    std_scaler = load_pickle(std_scaler_path)
+    # std_scaler = load_pickle(std_scaler_path)
     # load min-max scaler
-    norm_scaler = load_pickle(norm_scaler_path)
+    # norm_scaler = load_pickle(norm_scaler_path)
 
     # inference
     output = model.test(sample)
 
-    if not overwrite_num_classes:
-        unscaled_output = norm_scaler.inverse_transform(output)
-        unscaled_output = std_scaler.inverse_transform(unscaled_output)
-        return unscaled_output / 1000
-    else:
-        return output * 10000
+    # if not overwrite_num_classes:
+    #     unscaled_output = norm_scaler.inverse_transform(output)
+    #     unscaled_output = std_scaler.inverse_transform(unscaled_output)
+    #     return unscaled_output / 1000
+    # else:
+    #     return output * 10000
+    return output
 
 
 def build_embedding(

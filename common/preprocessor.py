@@ -29,8 +29,8 @@ def benchmarking_scaler(
     norm = MinMaxScaler()
     X_train_std = sc.fit_transform(benchmarkings)
     X_train_std_norm = norm.fit_transform(X_train_std)
-    save_pickle('./StandardScaler.pkl', sc)
-    save_pickle('./MinMaxScaler.pkl', norm)
+    save_pickle('../data/demo/StandardScaler.pkl', sc)
+    save_pickle('../data/demo/MinMaxScaler.pkl', norm)
     if return_mix:
         return X_train_std_norm
     else:

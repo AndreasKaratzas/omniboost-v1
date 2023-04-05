@@ -272,8 +272,8 @@ class HikeyEnv(gym.Env):
         else:
             _perf = simulate(model=self._simulator,
                             sample=self.cached_workload,
-                            std_scaler_path='../../data/demo/StandardScaler.pkl',
-                            norm_scaler_path='../../data/demo/MinMaxScaler.pkl',
+                            # std_scaler_path='../../data/demo/StandardScaler.pkl',
+                            # norm_scaler_path='../../data/demo/MinMaxScaler.pkl',
                             overwrite_num_classes=self.overwrite_num_classes,)
             return np.sum(_perf) * (self.dnn_ptr + 1)
     
