@@ -1,0 +1,33 @@
+{
+    "name": "AlexNet",
+    "num_layers": 8,
+    "partition_points": [
+        2,
+        6
+    ],
+    "order": "L-G-B",
+    "latency": 2.37862,
+    "throughput": 2,
+    "num_subgraphs": 3,
+    "stage-1": {
+        "latency": 1.75405,
+        "num_inferences": 5,
+        "transfer_time": 1.1667e-05,
+        "inference_time": 1.75323,
+        "total_time": 0.000814026
+    },
+    "stage-2": {
+        "latency": 0.42783,
+        "num_inferences": 5,
+        "transfer_time": 0.00258033,
+        "inference_time": 0.232109,
+        "total_time": 0.193141
+    },
+    "stage-3": {
+        "latency": 0.196734,
+        "num_inferences": 5,
+        "transfer_time": 0.000294578,
+        "inference_time": 0.196432,
+        "total_time": 7.582e-06
+    }
+}
