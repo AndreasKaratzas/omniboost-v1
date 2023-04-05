@@ -15,6 +15,10 @@ If you either added or removed packages, then you can save a checkpoint of the `
 conda env export --no-builds > environment.yml
 ```
 
+### Preliminaries
+
+For a custom dataset, you need to train a standardization and a normalization model. This is to avoid any numerical pitfalls during the training of the throughput estimator. To do so, use the function `preprocessor` and pass the target (`Y`) vectors to it. This will generate two files, `StandardScaler.pkl` and `MinMaxScaler.pkl`, which you need to place under the `data > demo` directory (or  under any other custom directory). After that, you can uncomment the lines `275 - 276` in `envs/hikey.py` and lines `95 - 96, 99, 101, 106 - 111` in `envs/utils.py`.
+
 ### Usage
 
 To first generate a fake dataset in order to test the code and understand the workflow, run:

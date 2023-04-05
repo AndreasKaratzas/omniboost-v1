@@ -7,7 +7,7 @@ from common.io import save_pickle
 
 
 # NOTE: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
-def benchmarking_scaler(
+def preprocessor(
     benchmarkings: np.ndarray,
     return_mix: bool = True
 ):
