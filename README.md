@@ -1,6 +1,27 @@
 # OmniBoost
 
+Boosting Throughput of Heterogeneous Embedded Devices under Multi-DNN Workload
+
+![Methodology](docs/methodology.png)
+
+### Abstract
+
 Modern Deep Neural Networks (DNNs) exhibit profound efficiency and accuracy properties. This has introduced application workloads that comprise of multiple DNN applications, raising new challenges regarding workload distribution. Equipped with a diverse set of accelerators, newer embedded system present architectural heterogeneity, which current run-time controllers are unable to fully utilize. To enable high throughput in multi-DNN workloads, such a controller is ought to explore hundreds of thousands of possible solutions to exploit the underlying heterogeneity. In this paper, we propose OmniBoost, a lightweight and extensible multi-DNN manager for heterogeneous embedded devices. We leverage stochastic space exploration and we combine it with a highly accurate performance estimator to observe a x4.6 average throughput boost compared to other state-of-the-art methods. The evaluation was performed on the HiKey970 development board.
+
+### References
+
+* [DAC](www.example.com)
+
+When using any of this project's source code, please cite:
+```bibtex
+@inproceedings{karatzas2023omniboost,
+    title={OmniBoost: A Lightweight Multi-DNN Manager for Heterogeneous Embedded Devices},
+    author={Karatzas, Andreas and Anastasopoulos, Iraklis},
+    booktitle={Proceedings of the 60th ACM/IEEE Design Automation Conference},
+    pages={1--6},
+    year={2023}
+}
+```
 
 ### Installation 
 
@@ -14,6 +35,13 @@ If you either added or removed packages, then you can save a checkpoint of the `
 ```powershell
 conda env export --no-builds > environment.yml
 ```
+
+The software has been tested under a Windows OS system. The software is portable, although you may need to remove the following packages from `environment.yml`:
+  - wincertstore=0.2
+  - vc=14.2
+  - win_inet_pton=1.1.0
+  - vs2015_runtime=14.27.29016
+  - pywin32=305
 
 ### Optional
 
@@ -45,18 +73,4 @@ Finally, we are ready to use the MCTS algorithm to find the best configuration f
 
 ```powershell
 cd lib/mcts; python main.py --seed 33 --workload 0 1 2 --use-deterministic-algorithms --demo --auto-set --resume '../../data/demo/experiments/<demo>/model/<model>.pth'
-```
-
-### Citation
-
-If you use this code for your research, please cite our paper:
-
-```bibtex
-@inproceedings{karatzas2023omniboost,
-    title={OmniBoost: A Lightweight Multi-DNN Manager for Heterogeneous Embedded Devices},
-    author={Karatzas, Andreas and Anastasopoulos, Iraklis},
-    booktitle={Proceedings of the 60th ACM/IEEE Design Automation Conference},
-    pages={1--6},
-    year={2023}
-}
 ```
