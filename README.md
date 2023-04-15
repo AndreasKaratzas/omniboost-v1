@@ -41,7 +41,7 @@ conda activate omniboost
 If you either added or removed packages, then you can save a checkpoint of the `conda` environment by:
 
 ```powershell
-conda env export --no-builds > environment.yml
+conda env export --no-builds > environment-<os>.yml
 ```
 
 The Linux distribution used for testing is Ubuntu 18.04.5. The Windows distribution used for testing is Windows 11 Pro, version 22H2.
