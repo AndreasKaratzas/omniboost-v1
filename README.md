@@ -4,8 +4,16 @@ Modern Deep Neural Networks (DNNs) exhibit profound efficiency and accuracy prop
 
 ### Installation 
 
+
+For Windows:
 ```powershell
-conda env create --file environment.yml
+conda env create --file environment-windows.yml
+conda activate omniboost
+```
+
+For Linux:
+```powershell
+conda env create --file environment-linux.yml
 conda activate omniboost
 ```
 
@@ -14,6 +22,8 @@ If you either added or removed packages, then you can save a checkpoint of the `
 ```powershell
 conda env export --no-builds > environment.yml
 ```
+
+The Linux distribution used for testing is Ubuntu 18.04.5. The Windows distribution used for testing is Windows 11 Pro, version 22H2.
 
 ### Optional
 
