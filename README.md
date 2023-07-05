@@ -15,10 +15,10 @@ Modern Deep Neural Networks (DNNs) exhibit profound efficiency and accuracy prop
 When using any of this project's source code, please cite:
 ```bibtex
 @inproceedings{karatzas2023omniboost,
-    title={OmniBoost: A Lightweight Multi-DNN Manager for Heterogeneous Embedded Devices},
+    title={OmniBoost: Boosting Throughput of Heterogeneous Embedded Devices under Multi-DNN Workload},
     author={Karatzas, Andreas and Anastasopoulos, Iraklis},
     booktitle={Proceedings of the 60th ACM/IEEE Design Automation Conference},
-    pages={1--6},
+    pages={t.b.a.},
     year={2023}
 }
 ```
